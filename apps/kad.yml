@@ -12,6 +12,9 @@ spec:
     path: helm
     repoURL: https://gitlab.com/6shore.net/kad.git
     targetRevision: HEAD
+    helm:
+      values: |
+        cluster: c2
   syncPolicy:
     automated:
       prune: true
