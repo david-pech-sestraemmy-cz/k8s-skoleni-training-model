@@ -9700,6 +9700,14 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
+data:	
+  repositories: |	
+    - type: git	
+      url: https://github.com/tomkukral/kubernetes-examples	
+    - type: git	
+      url: https://gitlab.com/6shore.net/kad.git	
+    - type: git	
+      url: https://github.com/david-pech-sestraemmy-cz/k8s-skoleni-training-model.git
 ---
 apiVersion: v1
 kind: ConfigMap
