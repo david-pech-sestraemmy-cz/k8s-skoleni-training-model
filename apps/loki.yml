@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: loki
+  namespace: argo
+spec:
+  destination:
+    namespace: loki
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: helm
+    targetRevision: HEAD
+    repoURL: https://github.com/david-pech-sestraemmy-cz/k8s-skoleni-training-model.git
+    targetRevision: HEAD
+    path: loki
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
